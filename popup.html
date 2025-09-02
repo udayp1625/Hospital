@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Doctor</title>
+  <style>
+    .outer3 {
+       border: 2px solid #e0e0e0;
+      height: auto;
+      width: 60%;
+      margin: 20px auto;
+      border-radius: 25px;
+      background-color: #e8f6fc;
+      padding: 20px;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%)scale(0.1);
+      visibility: hidden;
+      transition: transform 0.4s, top 0.4s;
+    }
+
+    .outer3 > h2 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #2ba5d8;
+    }
+
+    .inner3, .inner4 {
+      border: 2px solid #e0e0e0;
+      height: auto;
+      width: 80%;
+      border-radius: 30px;
+      background-color: #ffffff;
+      margin: 0 auto 30px;
+      overflow: hidden;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .inner3 img, .inner4 img {
+      border-radius: 20px;
+      height: 180px;
+      width: auto;
+    }
+
+    .text3 {
+      flex: 1;
+    }
+
+    .text3 h3 {
+      margin-bottom: 5px;
+      color: #1e7f9a;
+    }
+
+    .text3 p {
+      margin-top: 5px;
+      color: #555555;
+    }
+    .button3{
+        text-align: center;
+    }
+    .button3 >button{
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 1px solid white;
+        color: white;
+        background-color: #2ba5d8;
+    }
+
+    @media (max-width: 768px) {
+      .outer3 {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .inner3, .inner4 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .inner3 img, .inner4 img {
+        height: 150px;
+        margin-bottom: 10px;
+      }
+
+      .text3 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="outer3" id="popup2">
+    <h2>Dental Surgeon</h2>
+    
+    <div class="inner3">
+      <img src="doctor1.jpg" alt="Dr. Dinesh Agrawal">
+      <div class="text3">
+        <h3>Dr. Pankaj Sonawane</h3>
+        <p><i>~Orthopedic</i></p>
+        <p>Dr. Pankaj Sonawane is an expert Orthopaedic Surgeon who specializes in diagnosing and treating bone, joint, and muscle disorders, helping patients restore mobility and live pain-free lives.</p>
+      </div>
+    </div>
+
+    <div class="inner4">
+      <img src="dineshpateldr.jpg" alt="Dr. Dattatray Patil">
+      <div class="text3">
+        <h3>Dr. Dinesh Patel</h3>
+        <p><i>~Orthopedic</i></p>
+        <p>Dr. Dinesh Patel is an expert Orthopaedic Surgeon who specializes in diagnosing and treating bone, joint, and muscle disorders, helping patients restore mobility and live pain-free lives.</p>
+      </div>
+    </div>
+    <div class="button3"><button onclick="closePopup4()">Show less</button></div>
+      
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background: #e6f1fd;
+        }
+        .box{
+            border: 2px solid white;
+            height: 80%;
+            width: 25%;
+            margin: 10% auto;
+            background-color: white;
+            border-radius: 30px;
+            text-align: center;
+        }
+        img{
+            margin-top: 20px;
+            height: 6em;
+        }
+        h2{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;  
+            font-size: 24px;   
+            color: rgb(24, 23, 23); 
+        }
+        input{
+            padding: 10px 25px;
+            border-radius: 15px;
+            margin: 3%;
+            width: 50%;
+            border-style: dotted;
+        }
+        button{
+            padding: 10px 25px;
+            width: 100px;
+            border-radius: 20px;
+            border: 0.5px solid black;
+            background-color:#36b6ff ;
+            color: white;
+            font-weight: bold;
+        }
+        footer{
+            color: rgb(66, 64, 64);
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width:880px){
+            .box{
+                width: 50%;
+                margin: 25% auto;
+            }
+        }
+        @media only screen and (max-width:500px){
+            img{
+                height: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="logo.png" alt="Logo">
+        <h2>Login</h2>
+        
+        <!-- FORM sends data to Loginservlet -->
+        <form action="Loginservlet" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <br>
+            <input type="password" name="password" placeholder="Password" required>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <br><br>
+        <footer>© 2025 PharmaCare</footer>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

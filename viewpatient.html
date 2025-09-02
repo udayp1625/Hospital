@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View Patients</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #e1f5fe;
+    }
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2ba5d8;
+      padding: 0px 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      margin-left: 5%;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin-top: 1.5%;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      padding-bottom: 4px;
+      transition: border-bottom 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom: 2px solid white;
+    }
+    header {
+      padding-top: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      color: #0288d1;
+    }
+
+    .search-container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 50%;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .patient-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .patient-card {
+      background: white;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .patient-card:hover {
+      transform: scale(1.02);
+    }
+
+    .patient-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .patient-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .patient-id {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .patient-card {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .call-btn {
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo2.png" height="100">
+    </div>
+    <ul class="nav-links">
+      <li><a href="drHome.html">Home</a></li>
+      <li><a href="newpatient.html">New Patient</a></li>
+      <li><a href="createprescription.html">Create Prescription</a></li>
+      <li><a href="viewpatient.html" class="active">View Patient</a></li>
+      <a href="index.html"><button type="button" class="btn btn-light" >Logout</button></a>
+    </ul>
+  </nav>
+  <header>View Patients</header>
+
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search patient by name..." />
+  </div>
+
+  <div class="patient-list" id="patientList">
+  </div>
+</body>
+
+</html>
